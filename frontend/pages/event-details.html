@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Campus Events Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Campus Events Hub</h1>
+                    <span class="logo-tagline">Connect & Celebrate</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="create-event.html">Create Event</a></li>
+                <li><a href="my-events.html">My Events</a></li>
+                <li><a href="profile.html" class="profile-link hidden">Profile</a></li>
+                <li><a href="login.html" class="auth-link">Login</a></li>
+                <li><a href="signup.html" class="auth-link">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="eventDetails" class="event-details">
+            <!-- Event details will be loaded here -->
+        </div>
+
+        <section class="comments-section">
+            <h2>Comments</h2>
+            <div class="comment-form">
+                <textarea id="commentInput" placeholder="Write a comment..." rows="3"></textarea>
+                <button id="submitComment" class="btn btn-primary">Post Comment</button>
+            </div>
+
+            <div id="commentsList" class="comments-list">
+                <!-- Comments will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Events Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/api.js"></script>
+    <script src="../js/event-details.js"></script>
+</body>
+</html> 

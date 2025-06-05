@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - Campus Events Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/create-event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Campus Events Hub</h1>
+                    <span class="logo-tagline">Connect & Celebrate</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="create-event.html" class="active">Create Event</a></li>
+                <li><a href="my-events.html">My Events</a></li>
+                <li><a href="profile.html" class="profile-link hidden">Profile</a></li>
+                <li><a href="login.html" class="auth-link">Login</a></li>
+                <li><a href="signup.html" class="auth-link">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="create-event-container">
+        <div class="create-event-card">
+            <h2>Create New Event</h2>
+            <form id="createEventForm" class="create-event-form">
+                <div class="form-group">
+                    <label for="title">Event Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="academic">Academic</option>
+                        <option value="social">Social</option>
+                        <option value="sports">Sports</option>
+                        <option value="cultural">Cultural</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="maxAttendees">Maximum Attendees</label>
+                    <input type="number" id="maxAttendees" name="maxAttendees" min="1">
+                    <small>Leave empty for unlimited attendees</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Event Image</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                    <small>Maximum file size: 5MB</small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="create-button">Create Event</button>
+                    <button type="button" class="cancel-button" onclick="window.location.href='../index.html'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Events Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/create-event.js"></script>
+</body>
+</html> 

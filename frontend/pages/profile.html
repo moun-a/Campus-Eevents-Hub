@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Campus Events Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Campus Events Hub</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="create-event.html">Create Event</a></li>
+            <li><a href="my-events.html">My Events</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="../assets/default-avatar.jpg" alt="Profile picture" id="profileImage">
+                    <button class="change-photo-btn">
+                        <i class="fas fa-camera"></i>
+                        <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                    </button>
+                </div>
+                <h2 id="userName">Loading...</h2>
+                <p id="userEmail">Loading...</p>
+            </div>
+
+            <div class="profile-content">
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" id="department" name="department">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferences">Email Notifications</label>
+                        <div class="preferences-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newEventNotif" name="preferences" value="newEvent">
+                                New events in my department
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="eventUpdateNotif" name="preferences" value="eventUpdate">
+                                Updates to registered events
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="reminderNotif" name="preferences" value="reminder">
+                                Event reminders
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </div>
+                </form>
+
+                <div class="account-section">
+                    <h3>Account Settings</h3>
+                    <button class="change-password-btn" onclick="showChangePasswordModal()">
+                        <i class="fas fa-key"></i> Change Password
+                    </button>
+                    <button class="delete-account-btn" onclick="showDeleteAccountModal()">
+                        <i class="fas fa-trash"></i> Delete Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Change Password Modal -->
+    <div id="changePasswordModal" class="modal">
+        <div class="modal-content">
+            <h3>Change Password</h3>
+            <form id="changePasswordForm">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="save-btn">Change Password</button>
+                    <button type="button" class="cancel-btn" onclick="hideChangePasswordModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Account Modal -->
+    <div id="deleteAccountModal" class="modal">
+        <div class="modal-content">
+            <h3>Delete Account</h3>
+            <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+            <form id="deleteAccountForm">
+                <div class="form-group">
+                    <label for="deletePassword">Enter your password to confirm</label>
+                    <input type="password" id="deletePassword" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="delete-btn">Delete Account</button>
+                    <button type="button" class="cancel-btn" onclick="hideDeleteAccountModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Campus Events Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html> 

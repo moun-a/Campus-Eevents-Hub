@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Events - Campus Events Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/my-events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Campus Events Hub</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="create-event.html">Create Event</a></li>
+            <li><a href="my-events.html" class="active">My Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="my-events-container">
+        <div class="events-tabs">
+            <button class="tab-button active" data-tab="created">Created Events</button>
+            <button class="tab-button" data-tab="registered">Registered Events</button>
+        </div>
+
+        <div class="tab-content" id="createdEvents">
+            <div class="events-grid">
+                <!-- Events will be dynamically populated here -->
+            </div>
+        </div>
+
+        <div class="tab-content" id="registeredEvents" style="display: none;">
+            <div class="events-grid">
+                <!-- Registered events will be dynamically populated here -->
+            </div>
+        </div>
+
+        <!-- Event card template -->
+        <template id="eventCardTemplate">
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="" alt="Event image">
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title"></h3>
+                    <p class="event-date"></p>
+                    <p class="event-location"></p>
+                    <div class="event-status"></div>
+                    <div class="event-actions">
+                        <button class="edit-btn" style="display: none;">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="cancel-btn">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                        <button class="delete-btn" style="display: none;">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Events Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/my-events.js"></script>
+</body>
+</html> 

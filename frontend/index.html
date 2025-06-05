@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Campus Events Hub</h1>
+                    <span class="logo-tagline">Connect & Celebrate</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/create-event.html">Create Event</a></li>
+                <li><a href="pages/my-events.html">My Events</a></li>
+                <li><a href="pages/profile.html" class="profile-link hidden">Profile</a></li>
+                <li><a href="pages/login.html" class="auth-link">Login</a></li>
+                <li><a href="pages/signup.html" class="auth-link">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" data-aos="fade-down">
+            <h1>Discover Campus Events</h1>
+            <p>Stay connected with all the exciting events happening on campus!</p>
+            <div class="search-filters-container">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search events...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-container">
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="academic">Academic</option>
+                            <option value="social">Social</option>
+                            <option value="sports">Sports</option>
+                            <option value="cultural">Cultural</option>
+                        </select>
+                        <select id="dateFilter">
+                            <option value="">All Dates</option>
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-container">
+            <div id="eventsGrid" class="events-grid">
+                <!-- Events will be dynamically populated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Events Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html> 

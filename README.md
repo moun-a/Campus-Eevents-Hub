@@ -1,80 +1,94 @@
-# Campus Events Hub
+# 📚 Campus Events Hub
 
-A web application for managing campus events, allowing students to create, join, and manage various campus activities.
+Plateforme web pour la gestion et la participation aux événements d’un campus universitaire.  
+Développée dans le cadre d’un projet tutoré.
 
-## Prerequisites
+---
 
-- Node.js (v14 or higher)
-- MySQL (v8.0 or higher)
+## 👥 Membres du projet
 
-## Setup Instructions
+- **Mouna Mouhib** – Étudiante en systèmes embarqués et services numériques  
+- **Abdessamad Titi** – Étudiant en systèmes embarqués et services numériques  
+- **Encadrant :** M. **Tarik Fisaa**
 
-1. **Install Dependencies**
-   ```bash
-   # Install backend dependencies
-   cd backend
-   npm install
-   ```
+---
 
-2. **Configure Environment**
-   Create a `.env` file in the backend directory with:
-   ```
-   DB_HOST=localhost
-   DB_USER=root
-   DB_PASSWORD=your_mysql_password
-   DB_NAME=campus_events_hub
-   JWT_SECRET=your_jwt_secret_key
-   PORT=5000
-   ```
-   Replace the values with your actual configuration:
-   - `DB_HOST`: Your MySQL host (usually localhost)
-   - `DB_USER`: Your MySQL username
-   - `DB_PASSWORD`: Your MySQL password
-   - `DB_NAME`: Database name (default: campus_events_hub)
-   - `JWT_SECRET`: A secure random string for JWT token signing
-   - `PORT`: Backend server port (default: 5000)
+## 🔧 Structure du projet
 
-3. **Database Setup**
-   - Make sure MySQL is running
-   - The database will be automatically created and tables set up on first run
-   - Alternatively, you can manually set up the database using:
-     ```bash
-     cd database
-     mysql -u root -p < schema.sql
-     ```
+Campus-Eevents-Hub/
+├── backend/
+│ ├── app.js
+│ ├── routes/
+│ ├── controllers/
+│ ├── models/
+│ └── config/
+├── frontend/
+│ ├── index.html
+│ ├── pages/
+│ ├── css/
+│ └── js/
+├── database/
+│ └── schema.sql
+└── README.md
 
-4. **Start the Application**
-   ```bash
-   # Start backend server (from backend directory)
-   cd backend
-   npm start
-   ```
 
-The application will be running at:
-- Backend API: http://localhost:5000
-- Frontend: Open frontend/index.html in your browser
+## 🧰 Technologies utilisées
 
-## Features
+### 🔙 Backend
 
-- User authentication (register/login)
-- Create and manage events
-- Browse available events
-- Register for events
-- View event details and attendees
-- User profiles
+- **Node.js** avec **Express.js**
+- **MySQL** via le module `mysql2`
+- **JWT** (JSON Web Tokens) pour l’authentification
+- **Bcrypt** pour le hachage des mots de passe
+- **Dotenv** pour les variables d’environnement
+- **Nodemon** pour le développement
 
-## Database Structure
+### 🌐 Frontend
 
-The application uses three main tables:
-- Users: Store user information and credentials
-- Events: Store event details
-- EventAttendees: Track event registrations
+- **HTML5** (structure)
+- **CSS3** (styles)
+- **JavaScript (ES6+)** avec modules
+- **Font Awesome 6.0.0** (icônes)
+- **AOS 2.3.1** – Animate On Scroll (animations)
+- Aucun framework JS (pas de React/Vue/Angular)
 
-## Troubleshooting
+---
 
-If you encounter database connection issues:
-1. Make sure MySQL is running
-2. Verify your MySQL credentials in the .env file
-3. Ensure the campus_events_hub database exists
+## 🗃️ Structure de la base de données
 
-For any other issues, please contact: [Your Contact Information] 
+Le projet repose sur les tables suivantes :
+
+- `users` – Stocke les utilisateurs
+- `events` – Informations des événements
+- `categories` – Catégories des événements
+- `attendees` – Inscriptions aux événements
+- `comments` – Commentaires sur les événements
+
+*(Un diagramme relationnel est disponible dans le rapport.)*
+
+---
+
+## ✨ Fonctionnalités principales
+
+- Inscription et connexion sécurisées
+- Création, modification et suppression d’événements
+- Filtrage des événements par catégorie
+- Inscription / désinscription à un événement
+- Consultation de la liste des participants
+- Ajout de commentaires sur un événement
+
+---
+
+## 🚀 Démarrage local
+
+### 1. Cloner le dépôt
+
+```bash
+git clone https://github.com/moun-a/Campus-Eevents-Hub.git
+cd Campus-Eevents-Hub
+
+##Lancer le serveur backend
+
+cd backend
+npm install
+npm run dev

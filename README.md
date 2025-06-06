@@ -15,21 +15,7 @@ Développée dans le cadre d’un projet tutoré.
 
 ## 🔧 Structure du projet
 
-Campus-Eevents-Hub/
-├── backend/
-│ ├── app.js
-│ ├── routes/
-│ ├── controllers/
-│ ├── models/
-│ └── config/
-├── frontend/
-│ ├── index.html
-│ ├── pages/
-│ ├── css/
-│ └── js/
-├── database/
-│ └── schema.sql
-└── README.md
+<pre lang="markdown"> ```bash Campus-Eevents-Hub/ ├── backend/ │ ├── app.js │ ├── routes/ │ ├── controllers/ │ ├── models/ │ └── config/ ├── frontend/ │ ├── index.html │ ├── pages/ │ ├── css/ │ └── js/ ├── database/ │ └── schema.sql └── README.md ``` </pre>
 
 
 ## 🧰 Technologies utilisées

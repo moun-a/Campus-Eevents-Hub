@@ -9,7 +9,7 @@ Développée dans le cadre d’un projet tutoré.
 
 - **Mouna Mouhib** – Étudiante en systèmes embarqués et services numériques  
 - **Abdessamad Titi** – Étudiant en systèmes embarqués et services numériques  
-- **Encadrant :** M. **Tarik Fisaa**
+- **Encadrant :** M. **Tarik Fissaa**
 
 ---
 
